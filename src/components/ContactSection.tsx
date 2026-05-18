@@ -142,7 +142,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1" style={{ fontFamily: 'Montserrat, sans-serif' }}>Адрес</h3>
-                    <p className="text-sm text-muted-foreground">355037, Ставропольский край, г. Ставрополь, ул. Шпаковская, д. 76/9, кв. 156</p>
+                    <p className="text-sm text-muted-foreground">355037, г. Ставрополь, ул. Шпаковская, д. 76/9</p>
                     <p className="text-xs text-muted-foreground mt-1">Бесплатный выезд на объект</p>
                   </div>
                 </div>
