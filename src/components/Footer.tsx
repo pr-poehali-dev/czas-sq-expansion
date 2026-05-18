@@ -6,22 +6,12 @@ export function Footer() {
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="36" height="36" rx="6" fill="hsl(148,57%,23%)" />
-                <rect x="7" y="22" width="5" height="8" fill="white" />
-                <rect x="14" y="18" width="5" height="12" fill="white" />
-                <rect x="21" y="14" width="8" height="16" fill="white" />
-                <circle cx="9" cy="13" r="2.5" fill="hsl(148,35%,75%)" />
-                <circle cx="16" cy="10" r="2" fill="hsl(148,35%,75%)" />
-                <circle cx="25" cy="6" r="2.5" fill="hsl(148,35%,75%)" />
-                <line x1="9" y1="13" x2="16" y2="10" stroke="hsl(148,35%,75%)" strokeWidth="1" opacity="0.7" />
-                <line x1="16" y1="10" x2="25" y2="6" stroke="hsl(148,35%,75%)" strokeWidth="1" opacity="0.7" />
-              </svg>
-              <div className="flex flex-col leading-none">
-                <span className="text-sm font-black tracking-wider text-white" style={{ fontFamily: 'Montserrat, sans-serif' }}>САТТАРОВ</span>
-                <span className="text-xs font-semibold tracking-widest text-green-400" style={{ fontFamily: 'Montserrat, sans-serif' }}>И ПАРТНЁРЫ</span>
-              </div>
+            <div className="mb-4">
+              <img
+                src="https://cdn.poehali.dev/projects/32067507-171f-4139-8d2f-0b034a6bdb19/bucket/11fdeccd-685f-4ea0-826b-d23b54f0d59a.png"
+                alt="САТТАРОВ И ПАРТНЁРЫ"
+                className="h-16 w-auto object-contain brightness-0 invert"
+              />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mb-4 max-w-sm">
               Строительная компания полного цикла. Строим для людей — создаём комфортную, экологичную и надёжную среду для жизни и бизнеса.
