@@ -15,20 +15,14 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute w-[600px] h-[600px] rounded-full blur-3xl opacity-20"
-          style={{ background: 'hsl(148,57%,23%)', top: "10%", left: "-5%" }}
+      {/* Background image */}
+      <div className="absolute inset-0 pointer-events-none">
+        <img
+          src="https://cdn.poehali.dev/projects/32067507-171f-4139-8d2f-0b034a6bdb19/bucket/728aed00-05eb-402a-b3d8-0da277564258.png"
+          alt=""
+          className="w-full h-full object-cover object-center"
         />
-        <div
-          className="absolute w-[400px] h-[400px] rounded-full blur-3xl opacity-15"
-          style={{ background: 'hsl(148,45%,33%)', bottom: "5%", right: "10%" }}
-        />
-        <div
-          className="absolute w-[300px] h-[300px] rounded-full blur-3xl opacity-10 transition-all duration-1000 ease-out"
-          style={{ background: 'hsl(148,35%,75%)', left: `${mousePosition.x - 150}px`, top: `${mousePosition.y - 150}px` }}
-        />
+        <div className="absolute inset-0 bg-background/60" />
       </div>
 
       {/* City skyline decorative bottom */}
