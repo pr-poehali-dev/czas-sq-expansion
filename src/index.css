@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,76 +6,76 @@
 
 @layer base {
   :root {
-    /* Custom color palette for CodeCraft light mode */
+    /* САТТАРОВ И ПАРТНЁРЫ — light mode */
     --background: 0 0% 99%;
-    --foreground: 240 10% 10%;
+    --foreground: 150 20% 8%;
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
+    --card-foreground: 150 20% 8%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
-    --primary: 350 100% 50%; /* Bright red #FF0035 */
+    --popover-foreground: 150 20% 8%;
+    --primary: 148 57% 23%; /* #1B5E35 — тёмно-зелёный */
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 5% 95%;
-    --secondary-foreground: 240 10% 10%;
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 5% 45%;
-    --accent: 350 100% 50%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 350 100% 50%;
+    --secondary: 148 45% 33%; /* #2E7D52 — средний зелёный */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 150 30% 94%; /* светло-мятный фон */
+    --muted-foreground: 148 20% 35%;
+    --accent: 148 35% 75%; /* #A8D5B5 — мятный */
+    --accent-foreground: 150 20% 8%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
-    --border: 240 5% 90%;
-    --input: 240 5% 90%;
-    --ring: 350 100% 50%;
+    --border: 148 20% 88%;
+    --input: 148 20% 88%;
+    --ring: 148 57% 23%;
     --radius: 0.5rem;
-    --chart-1: 350 100% 50%;
-    --chart-2: 240 5% 35%;
-    --chart-3: 240 5% 45%;
-    --chart-4: 240 5% 55%;
-    --chart-5: 240 5% 65%;
+    --chart-1: 148 57% 23%;
+    --chart-2: 148 45% 33%;
+    --chart-3: 148 35% 55%;
+    --chart-4: 148 35% 75%;
+    --chart-5: 148 20% 88%;
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5% 26%;
-    --sidebar-primary: 240 5% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 5% 96%;
-    --sidebar-accent-foreground: 240 5% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-foreground: 150 20% 8%;
+    --sidebar-primary: 148 57% 23%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 30% 94%;
+    --sidebar-accent-foreground: 150 20% 8%;
+    --sidebar-border: 148 20% 88%;
+    --sidebar-ring: 148 57% 23%;
   }
 
   .dark {
-    /* Custom color palette for CodeCraft dark mode */
-    --background: 240 10% 9%; /* #0E131F */
-    --foreground: 0 0% 98%;
-    --card: 240 10% 13%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 11%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 350 100% 50%; /* Bright red #FF0035 */
+    /* САТТАРОВ И ПАРТНЁРЫ — dark mode */
+    --background: 150 25% 6%; /* #0F1A14 — глубокий тёмно-зелёный */
+    --foreground: 0 0% 97%;
+    --card: 150 22% 10%;
+    --card-foreground: 0 0% 97%;
+    --popover: 150 22% 9%;
+    --popover-foreground: 0 0% 97%;
+    --primary: 148 57% 23%; /* #1B5E35 */
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 10% 22%; /* #38405F */
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 10% 26%; /* #59546C */
-    --muted-foreground: 240 5% 55%; /* #8B939C */
-    --accent: 350 100% 50%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 350 100% 50%;
+    --secondary: 148 45% 33%; /* #2E7D52 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 150 20% 16%;
+    --muted-foreground: 148 20% 55%;
+    --accent: 148 35% 75%; /* #A8D5B5 */
+    --accent-foreground: 150 20% 8%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
-    --border: 240 10% 22%;
-    --input: 240 10% 22%;
-    --ring: 350 100% 50%;
-    --chart-1: 350 100% 50%;
-    --chart-2: 240 10% 35%;
-    --chart-3: 240 10% 45%;
-    --chart-4: 240 10% 55%;
-    --chart-5: 240 10% 65%;
-    --sidebar-background: 240 5% 10%;
-    --sidebar-foreground: 240 5% 96%;
-    --sidebar-primary: 217 76% 48%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4% 27%;
-    --sidebar-accent-foreground: 240 5% 96%;
-    --sidebar-border: 240 4% 27%;
-    --sidebar-ring: 217 91% 44%;
+    --border: 150 20% 18%;
+    --input: 150 20% 18%;
+    --ring: 148 57% 23%;
+    --chart-1: 148 57% 23%;
+    --chart-2: 148 45% 33%;
+    --chart-3: 148 35% 55%;
+    --chart-4: 148 35% 75%;
+    --chart-5: 150 20% 30%;
+    --sidebar-background: 150 25% 7%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 148 57% 23%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 20% 16%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 150 20% 18%;
+    --sidebar-ring: 148 57% 23%;
   }
 }
 
@@ -85,11 +85,19 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Montserrat", "Inter", system-ui, sans-serif;
   }
 }
 
-/* Custom animations for scroll effects */
+/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -104,23 +112,19 @@
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
 }
-
 .animate-delay-100 {
   animation-delay: 0.1s;
   opacity: 0;
 }
-
 .animate-delay-200 {
   animation-delay: 0.2s;
   opacity: 0;
 }
-
 .animate-delay-300 {
   animation-delay: 0.3s;
   opacity: 0;
 }
 
-/* Added floating animation for hero icons */
 @keyframes float {
   0%,
   100% {
@@ -130,15 +134,21 @@
     transform: translateY(-20px);
   }
 }
-
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
 
-/* Grid pattern for process section */
+/* Grid pattern */
 .bg-grid-pattern {
   background-image:
     linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
     linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
   background-size: 40px 40px;
+}
+
+/* Construction city skyline decorative pattern */
+.bg-skyline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,80 L0,120 L1200,120 L1200,80 L1100,80 L1100,40 L1080,40 L1080,20 L1060,20 L1060,40 L1040,40 L1040,80 L960,80 L960,30 L940,30 L940,10 L920,10 L920,30 L900,30 L900,60 L880,60 L880,80 L800,80 L800,50 L780,50 L780,80 L700,80 L700,20 L680,20 L680,5 L660,5 L660,20 L640,20 L640,80 L560,80 L560,45 L540,45 L540,80 L460,80 L460,35 L440,35 L440,15 L420,15 L420,35 L400,35 L400,80 L320,80 L320,55 L300,55 L300,80 L220,80 L220,25 L200,25 L200,80 L120,80 L120,50 L100,50 L100,80 L0,80Z' fill='%232E7D52' opacity='0.15'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }

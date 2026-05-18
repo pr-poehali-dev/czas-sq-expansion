@@ -4,40 +4,36 @@ import { Button } from "@/components/ui/button"
 
 const projects = [
   {
-    title: "Лендинг фитнес-клуба",
-    category: "Лендинг",
+    title: "Жилой комплекс «Зелёный квартал»",
+    category: "Жилое строительство",
     image: "/restaurant-website-design.png",
     description:
-      "Продающий лендинг для премиум фитнес-клуба. Конверсия с посетителя в заявку — 8,4%. Анимации, онлайн-запись и интеграция с CRM.",
-    url: "#",
-    tags: ["React", "Tailwind CSS", "Framer Motion"],
+      "Экологичный жилой комплекс на 320 квартир. Зелёные кровли, солнечные панели, система сбора дождевой воды. Сдан в срок, в рамках бюджета.",
+    tags: ["Жильё", "Эко-технологии", "Казань"],
   },
   {
-    title: "Интернет-магазин одежды",
-    category: "E-commerce",
-    image: "/modern-ecommerce-website.png",
-    description:
-      "Полнофункциональный магазин с каталогом, фильтрами, корзиной и оплатой. Запустили за 3 недели. Уже в первый месяц — 150+ заказов.",
-    url: "#",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
-  },
-  {
-    title: "Корпоративный сайт агентства",
-    category: "Корпоративный сайт",
+    title: "Бизнес-центр «Панорама»",
+    category: "Коммерческое строительство",
     image: "/professional-corporate-website.png",
     description:
-      "Представительский сайт для PR-агентства с блогом, командой и кейсами. SEO-оптимизация вывела сайт в топ-5 по целевым запросам за 2 месяца.",
-    url: "#",
-    tags: ["React", "CMS", "SEO", "Tailwind CSS"],
+      "12-этажный офисный центр класса А. Фасад с вентилируемой системой, панорамное остекление, современная инженерия. Площадь 18 000 м².",
+    tags: ["Коммерция", "Офис", "Фасад"],
   },
   {
-    title: "Портфолио и личный бренд",
-    category: "Портфолио-сайт",
+    title: "Парк «Экоквартал»",
+    category: "Благоустройство",
+    image: "/modern-ecommerce-website.png",
+    description:
+      "Комплексное благоустройство городского квартала: ландшафтный дизайн, велодорожки, детские площадки, 500 высаженных деревьев.",
+    tags: ["Благоустройство", "Озеленение", "Экология"],
+  },
+  {
+    title: "Загородный жилой посёлок",
+    category: "Малоэтажное строительство",
     image: "/creative-portfolio-website.png",
     description:
-      "Персональный сайт для дизайнера с анимированным портфолио, кейсами и блогом. Тёмная тема, плавные переходы, высокий балл в Lighthouse.",
-    url: "#",
-    tags: ["React", "GSAP", "TypeScript", "Framer Motion"],
+      "48 коттеджей из экологически чистых материалов. Единый архитектурный стиль, инфраструктура, общественные зелёные зоны.",
+    tags: ["Коттеджи", "Эко-материалы", "Инфраструктура"],
   },
 ]
 
@@ -46,9 +42,17 @@ export function PortfolioSection() {
     <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">Наше портфолио</h2>
+          <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wide">
+            Реализованные объекты
+          </div>
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-balance"
+            style={{ fontFamily: 'Montserrat, sans-serif' }}
+          >
+            Наши <span className="text-primary">объекты</span>
+          </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            Несколько примеров из более чем 70 реализованных проектов. Каждый — уникальный дизайн и измеримый результат.
+            Более 200 реализованных проектов — жилые дома, коммерческие здания, благоустройство территорий.
           </p>
         </div>
 
@@ -69,19 +73,26 @@ export function PortfolioSection() {
                     size="sm"
                     variant="secondary"
                     className="gap-2"
-                    onClick={() => project.url !== "#" && window.open(project.url, "_blank")}
                   >
-                    Смотреть кейс <ExternalLink className="h-4 w-4" />
+                    Подробнее <ExternalLink className="h-4 w-4" />
                   </Button>
+                </div>
+                {/* Green overlay badge */}
+                <div className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold text-white" style={{ background: 'hsl(148,57%,23%)' }}>
+                  {project.category}
                 </div>
               </div>
               <CardContent className="p-6">
-                <p className="text-sm text-primary font-semibold mb-2">{project.category}</p>
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <h3
+                  className="text-xl font-bold mb-2"
+                  style={{ fontFamily: 'Montserrat, sans-serif' }}
+                >
+                  {project.title}
+                </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground">
+                    <span key={tagIndex} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">
                       {tag}
                     </span>
                   ))}

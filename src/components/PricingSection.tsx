@@ -4,41 +4,42 @@ import { QuoteFormDialog } from "@/components/QuoteFormDialog"
 
 const pricingTiers = [
   {
-    name: "Лендинг",
-    price: "49 900",
+    name: "Отделка",
+    price: "от 3 500",
+    unit: "₽/м²",
     features: [
-      "1 страница под ключ",
-      "Уникальный дизайн в Figma",
-      "Адаптив под все устройства",
-      "Форма заявки или callback",
-      "Базовое SEO",
-      "Сдача за 7–10 дней",
+      "Черновая и чистовая отделка",
+      "Монтаж напольных покрытий",
+      "Покраска и обои",
+      "Установка дверей и плинтусов",
+      "Гарантия 2 года",
     ],
     highlighted: false,
   },
   {
-    name: "Корпоративный сайт",
-    price: "129 900",
+    name: "Строительство",
+    price: "от 45 000",
+    unit: "₽/м²",
     features: [
-      "До 10 страниц",
-      "Система управления контентом",
-      "Блог и новостной раздел",
-      "Расширенное SEO",
-      "Интеграция с CRM",
-      "3 месяца поддержки",
+      "Проектирование под ключ",
+      "Фундамент, стены, кровля",
+      "Инженерные системы",
+      "Фасад и экстерьер",
+      "Благоустройство участка",
+      "Гарантия 5 лет",
     ],
     highlighted: true,
   },
   {
-    name: "Веб-приложение",
+    name: "Индивидуальный",
     price: "По запросу",
+    unit: "",
     features: [
-      "Личный кабинет и авторизация",
-      "Интеграции с внешними сервисами",
-      "Онлайн-оплата",
-      "Индивидуальная архитектура",
+      "Крупные коммерческие объекты",
+      "BIM-проектирование",
+      "Экологическая сертификация",
       "Персональный менеджер",
-      "6+ месяцев поддержки",
+      "Полное юридическое сопровождение",
     ],
     highlighted: false,
   },
@@ -48,24 +49,27 @@ export function PricingSection() {
   return (
     <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 rounded-full blur-3xl opacity-10" style={{ background: 'hsl(148,57%,23%)' }} />
+        <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full blur-3xl opacity-10" style={{ background: 'hsl(148,45%,33%)' }} />
       </div>
 
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4 tracking-wide">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
             Прозрачные цены
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-balance">
-            Прозрачные цены — <span className="text-primary">без сюрпризов</span>
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-black text-balance"
+            style={{ fontFamily: 'Montserrat, sans-serif' }}
+          >
+            Стоимость <span className="text-primary">работ</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Фиксированная стоимость, чёткие сроки и понятный объём работ по каждому пакету
+            Фиксированные цены, чёткие сроки, без скрытых доплат
           </p>
         </div>
 
@@ -80,21 +84,25 @@ export function PricingSection() {
               } transition-all duration-300`}
             >
               {tier.highlighted && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold shadow-lg tracking-wide">
                   Популярный
                 </div>
               )}
               <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl mb-2">{tier.name}</CardTitle>
+                <CardTitle
+                  className="text-2xl mb-2 font-black"
+                  style={{ fontFamily: 'Montserrat, sans-serif' }}
+                >
+                  {tier.name}
+                </CardTitle>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold">
+                  <span className="text-4xl font-black text-primary" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                     {tier.price === "По запросу" ? (
                       <span className="text-3xl">{tier.price}</span>
                     ) : (
                       <>
-                        <span className="text-lg font-normal text-muted-foreground">от </span>
                         {tier.price}
-                        <span className="text-lg font-normal text-muted-foreground"> ₽</span>
+                        <span className="text-lg font-normal text-muted-foreground"> {tier.unit}</span>
                       </>
                     )}
                   </span>
@@ -112,9 +120,9 @@ export function PricingSection() {
                 <QuoteFormDialog
                   packageName={tier.name}
                   variant={tier.highlighted ? "default" : "outline"}
-                  className={`w-full ${tier.highlighted ? "shadow-lg shadow-primary/20" : ""}`}
+                  className={`w-full font-semibold ${tier.highlighted ? "shadow-lg shadow-primary/20" : ""}`}
                 >
-                  {tier.price === "По запросу" ? "Связаться с нами" : "Выбрать тариф"}
+                  {tier.price === "По запросу" ? "Получить расчёт" : "Заказать"}
                 </QuoteFormDialog>
               </CardContent>
             </Card>
@@ -123,8 +131,8 @@ export function PricingSection() {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-muted-foreground">
-            Все тарифы включают <span className="text-primary font-semibold">бесплатную настройку хостинга</span> и{" "}
-            <span className="text-primary font-semibold">SSL-сертификат</span>
+            Все работы выполняются с <span className="text-primary font-semibold">гарантией качества</span> и{" "}
+            <span className="text-primary font-semibold">актом выполненных работ</span>
           </p>
         </div>
       </div>

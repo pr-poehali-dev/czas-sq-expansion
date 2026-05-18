@@ -1,4 +1,3 @@
-import { ThemeToggle } from "@/components/ThemeToggle"
 import { Logo } from "@/components/Logo"
 import { MobileMenu } from "@/components/MobileMenu"
 import { useState, useEffect } from "react"
@@ -7,9 +6,7 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
+    const handleScroll = () => { setIsScrolled(window.scrollY > 10) }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -17,7 +14,7 @@ export function Navbar() {
   return (
     <nav
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : "bg-transparent"
+        isScrolled ? "bg-background/90 backdrop-blur-lg border-b border-border shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,25 +24,32 @@ export function Navbar() {
           </a>
 
           <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">
-              О нас
-            </a>
-            <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">
-              Услуги
-            </a>
-            <a href="#portfolio" className="text-sm font-medium hover:text-primary transition-colors">
-              Портфолио
-            </a>
-            <a href="#pricing" className="text-sm font-medium hover:text-primary transition-colors">
-              Тарифы
-            </a>
-            <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
-              Контакты
-            </a>
+            {[
+              { href: "#about", label: "О компании" },
+              { href: "#services", label: "Услуги" },
+              { href: "#portfolio", label: "Объекты" },
+              { href: "#pricing", label: "Стоимость" },
+              { href: "#contact", label: "Контакты" },
+            ].map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm font-semibold hover:text-primary transition-colors tracking-wide"
+                style={{ fontFamily: 'Montserrat, sans-serif' }}
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
 
-          <div className="flex items-center gap-2">
-            <ThemeToggle />
+          <div className="flex items-center gap-3">
+            <a
+              href="#contact"
+              className="hidden md:inline-flex items-center px-4 py-2 rounded-lg text-sm font-bold text-primary-foreground transition-all hover:opacity-90"
+              style={{ background: 'hsl(148,57%,23%)', fontFamily: 'Montserrat, sans-serif' }}
+            >
+              Заказать расчёт
+            </a>
             <MobileMenu />
           </div>
         </div>

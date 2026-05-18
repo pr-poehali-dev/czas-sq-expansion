@@ -1,59 +1,62 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Layout, Palette, Code, Share2, Target, Search } from "lucide-react"
+import { Building2, HardHat, Leaf, Home, Wrench, TreePine } from "lucide-react"
 
 const services = [
   {
-    icon: Layout,
-    title: "Лендинги и сайты",
+    icon: Building2,
+    title: "Строительство под ключ",
     description:
-      "Создаём продающие одностраничники и корпоративные сайты с нуля. Каждый проект — уникальный дизайн, адаптированный под вашу аудиторию и бизнес-цели. Никаких шаблонов с биржи.",
+      "Возводим жилые, коммерческие и промышленные объекты. От фундамента до сдачи — полный цикл работ с соблюдением сроков и строительных норм.",
   },
   {
-    icon: Code,
-    title: "Веб-приложения",
+    icon: Home,
+    title: "Интерьер и экстерьер",
     description:
-      "Разрабатываем сложные веб-сервисы: личные кабинеты, CRM-системы, маркетплейсы и SaaS-продукты. Используем современный стек — React, Node.js, PostgreSQL.",
+      "Преображаем пространства: авторский дизайн интерьеров, отделка фасадов, благоустройство территории. Создаём комфортную среду для жизни и работы.",
   },
   {
-    icon: Palette,
-    title: "UI/UX дизайн",
+    icon: Leaf,
+    title: "Экологичные решения",
     description:
-      "Проектируем интерфейсы, которые приятно использовать. Исследуем целевую аудиторию, создаём прототипы и передаём готовые макеты в Figma для разработки.",
+      "Применяем экологически чистые материалы и энергоэффективные технологии. Строим в гармонии с природой — заботимся о будущем планеты.",
   },
   {
-    icon: Share2,
-    title: "Интернет-магазины",
+    icon: Wrench,
+    title: "Проектирование",
     description:
-      "Запускаем e-commerce проекты с каталогом, корзиной, оплатой и личным кабинетом. Интегрируем 1С, CRM и службы доставки. Всё готово к продажам с первого дня.",
+      "Разрабатываем архитектурные и конструктивные проекты. BIM-проектирование, 3D-визуализация, полная проектная документация под ключ.",
   },
   {
-    icon: Target,
-    title: "Брендинг и айдентика",
+    icon: HardHat,
+    title: "Капитальный ремонт",
     description:
-      "Разрабатываем фирменный стиль: логотип, цвета, типографику и гайдлайн. Ваш бренд получит узнаваемый визуальный язык, который работает во всех каналах.",
+      "Комплексный капитальный ремонт зданий и помещений. Усиление конструкций, замена инженерных систем, восстановление несущих элементов.",
   },
   {
-    icon: Search,
-    title: "SEO-продвижение",
+    icon: TreePine,
+    title: "Благоустройство",
     description:
-      "Выводим сайты в топ поисковых систем. Технический аудит, оптимизация контента, ссылочное продвижение — комплексный подход для стабильного роста органического трафика.",
+      "Ландшафтный дизайн, озеленение территорий, устройство парков и скверов. Создаём зелёные пространства, где людям приятно находиться.",
   },
 ]
 
 export function ServicesSection() {
   return (
     <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 animate-pulse" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5" />
 
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mx-auto block w-fit">
+        <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mx-auto block w-fit tracking-wide">
           Наши услуги
         </div>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-balance">
-          Что мы <span className="text-primary">делаем</span>
+        <h2
+          className="text-3xl sm:text-4xl md:text-5xl font-black text-center mb-4 text-balance"
+          style={{ fontFamily: 'Montserrat, sans-serif' }}
+        >
+          Что мы <span className="text-primary">строим</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto text-pretty leading-relaxed text-lg">
-          Полный цикл создания цифровых продуктов — от стратегии и дизайна до разработки и продвижения в поиске.
+          Полный спектр строительных услуг — от проекта до благоустройства территории.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
@@ -65,7 +68,12 @@ export function ServicesSection() {
                 <div className="mb-4 inline-flex p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
                   <service.icon className="h-6 w-6" />
                 </div>
-                <CardTitle className="text-xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
+                <CardTitle
+                  className="text-xl group-hover:text-primary transition-colors"
+                  style={{ fontFamily: 'Montserrat, sans-serif' }}
+                >
+                  {service.title}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">{service.description}</CardDescription>
