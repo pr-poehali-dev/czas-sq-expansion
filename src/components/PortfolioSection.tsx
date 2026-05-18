@@ -41,20 +41,6 @@ export function PortfolioSection() {
   return (
     <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wide">
-            Реализованные объекты
-          </div>
-          <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-balance"
-            style={{ fontFamily: 'Montserrat, sans-serif' }}
-          >
-            Наши <span className="text-primary">объекты</span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            Более 200 реализованных проектов — жилые дома, коммерческие здания, благоустройство территорий.
-          </p>
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
