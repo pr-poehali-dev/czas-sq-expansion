@@ -18,7 +18,7 @@ export function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0 pointer-events-none">
         <img
-          src="https://cdn.poehali.dev/projects/32067507-171f-4139-8d2f-0b034a6bdb19/files/312e7966-c99a-4cbd-9e6a-5a0d1f4f508e.jpg"
+          src="https://cdn.poehali.dev/projects/32067507-171f-4139-8d2f-0b034a6bdb19/files/e1bbfabc-dcb4-45d2-adb7-dcfb0b403fd8.jpg"
           alt=""
           className="w-full h-full object-cover object-center"
         />
