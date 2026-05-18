@@ -128,7 +128,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1" style={{ fontFamily: 'Montserrat, sans-serif' }}>E-mail</h3>
-                    <p className="text-sm text-muted-foreground">саттаров-loft@yandex.ru</p>
+                    <p className="text-sm text-muted-foreground">sattarov-partners@yandex.ru</p>
                   </div>
                 </div>
               </CardContent>
@@ -149,18 +149,7 @@ export function ContactSection() {
               </CardContent>
             </Card>
 
-            {/* Brand color palette */}
-            <Card className="border-none shadow-lg">
-              <CardContent className="p-6">
-                <h3 className="font-bold mb-3 text-sm" style={{ fontFamily: 'Montserrat, sans-serif' }}>Корпоративные цвета</h3>
-                <div className="flex gap-2">
-                  <div className="flex-1 h-8 rounded" style={{ background: 'hsl(148,57%,23%)' }} title="#1B5E35" />
-                  <div className="flex-1 h-8 rounded" style={{ background: 'hsl(148,45%,33%)' }} title="#2E7D52" />
-                  <div className="flex-1 h-8 rounded" style={{ background: 'hsl(148,35%,55%)' }} title="#4CAF7C" />
-                  <div className="flex-1 h-8 rounded border border-border" style={{ background: 'hsl(148,35%,75%)' }} title="#A8D5B5" />
-                </div>
-              </CardContent>
-            </Card>
+
           </div>
         </div>
       </div>

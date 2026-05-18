@@ -16,7 +16,9 @@ export function Footer() {
             <p className="text-sm text-gray-400 leading-relaxed mb-4 max-w-sm">
               Строительная компания полного цикла. Строим для людей — создаём комфортную, экологичную и надёжную среду для жизни и бизнеса.
             </p>
-            <p className="text-xs text-gray-500">© 2025 САТТАРОВ И ПАРТНЁРЫ. Все права защищены.</p>
+            <p className="text-xs text-gray-500 mt-1">ООО «САТТАРОВ И ПАРТНЁРЫ»</p>
+            <p className="text-xs text-gray-500">ОГРН: 1252600016866 &nbsp;|&nbsp; ИНН: 2635268075</p>
+            <p className="text-xs text-gray-500 mt-1">© 2025 САТТАРОВ И ПАРТНЁРЫ. Все права защищены.</p>
           </div>
 
           <div>
@@ -47,7 +49,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2 text-sm text-gray-400">
                 <Mail className="h-4 w-4 text-green-500 flex-shrink-0" />
-                саттаров-loft@yandex.ru
+                sattarov-partners@yandex.ru
               </li>
               <li className="flex items-start gap-2 text-sm text-gray-400">
                 <MapPin className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
