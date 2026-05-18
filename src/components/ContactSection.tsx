@@ -112,7 +112,8 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1" style={{ fontFamily: 'Montserrat, sans-serif' }}>Телефон</h3>
-                    <p className="text-sm text-muted-foreground">+7 (999) 123-45-67</p>
+                    <p className="text-sm text-muted-foreground">+7 (914) 925-24-25</p>
+                    <p className="text-sm text-muted-foreground">+7 (984) 270-38-25</p>
                     <p className="text-xs text-muted-foreground mt-1">Пн–Пт: 8:00–19:00</p>
                   </div>
                 </div>
@@ -127,7 +128,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1" style={{ fontFamily: 'Montserrat, sans-serif' }}>E-mail</h3>
-                    <p className="text-sm text-muted-foreground">info@sattarov-partners.ru</p>
+                    <p className="text-sm text-muted-foreground">саттаров-loft@yandex.ru</p>
                   </div>
                 </div>
               </CardContent>
@@ -141,7 +142,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1" style={{ fontFamily: 'Montserrat, sans-serif' }}>Адрес</h3>
-                    <p className="text-sm text-muted-foreground">г. Казань, ул. Строителей, 123</p>
+                    <p className="text-sm text-muted-foreground">355037, Ставропольский край, г. Ставрополь, ул. Шпаковская, д. 76/9, кв. 156</p>
                     <p className="text-xs text-muted-foreground mt-1">Бесплатный выезд на объект</p>
                   </div>
                 </div>

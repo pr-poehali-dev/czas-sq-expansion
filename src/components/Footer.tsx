@@ -43,15 +43,15 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-gray-400">
                 <Phone className="h-4 w-4 text-green-500 flex-shrink-0" />
-                +7 (999) 123-45-67
+                +7 (914) 925-24-25, +7 (984) 270-38-25
               </li>
               <li className="flex items-center gap-2 text-sm text-gray-400">
                 <Mail className="h-4 w-4 text-green-500 flex-shrink-0" />
-                info@sattarov-partners.ru
+                саттаров-loft@yandex.ru
               </li>
               <li className="flex items-start gap-2 text-sm text-gray-400">
                 <MapPin className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
-                г. Казань, ул. Строителей, 123
+                355037, г. Ставрополь, ул. Шпаковская, д. 76/9
               </li>
             </ul>
           </div>
