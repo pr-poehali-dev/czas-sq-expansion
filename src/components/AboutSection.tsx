@@ -70,7 +70,7 @@ export function AboutSection() {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
             <div key={index} className="text-center group cursor-default">
               <div
@@ -82,6 +82,26 @@ export function AboutSection() {
               <div className="text-muted-foreground font-medium">{stat.label}</div>
             </div>
           ))}
+        </div>
+
+        {/* Brand Identity showcase */}
+        <div className="rounded-2xl overflow-hidden shadow-2xl border border-primary/20">
+          <div className="bg-primary/5 px-6 py-4 border-b border-primary/10 flex items-center gap-3">
+            <Leaf className="h-5 w-5 text-primary" />
+            <span className="font-bold text-sm tracking-wide" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+              ФИРМЕННЫЙ СТИЛЬ И КОРПОРАТИВНАЯ АЙДЕНТИКА
+            </span>
+          </div>
+          <img
+            src="https://cdn.poehali.dev/projects/32067507-171f-4139-8d2f-0b034a6bdb19/files/494524cb-333d-479b-8a23-58d43846501a.jpg"
+            alt="Корпоративная айдентика САТТАРОВ И ПАРТНЁРЫ"
+            className="w-full h-auto object-cover"
+          />
+          <div className="bg-primary/5 px-6 py-4 border-t border-primary/10">
+            <p className="text-sm text-muted-foreground text-center">
+              Единый фирменный стиль: офис, флаг, транспорт, визитки, каски и спецодежда — всё в корпоративных цветах
+            </p>
+          </div>
         </div>
       </div>
     </section>
